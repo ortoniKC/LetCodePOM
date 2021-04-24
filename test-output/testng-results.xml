@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-04-24T08:09:00Z" name="Suite" finished-at="2021-04-24T08:09:15Z" duration-ms="15249">
+    <groups>
+    </groups>
+    <test started-at="2021-04-24T08:09:00Z" name="Test" finished-at="2021-04-24T08:09:15Z" duration-ms="15249">
+      <class name="org.letcode.test.TC001Login">
+        <test-method is-config="true" signature="startApp()[pri:0, instance:org.letcode.test.TC001Login@5fa07e12]" started-at="2021-04-24T08:09:00Z" name="startApp" finished-at="2021-04-24T08:09:11Z" duration-ms="10689" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startApp -->
+        <test-method signature="loginTest()[pri:0, instance:org.letcode.test.TC001Login@5fa07e12]" started-at="2021-04-24T08:09:11Z" name="loginTest" finished-at="2021-04-24T08:09:13Z" duration-ms="2509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:org.letcode.test.TC001Login@5fa07e12]" started-at="2021-04-24T08:09:13Z" name="closeApp" finished-at="2021-04-24T08:09:14Z" duration-ms="961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- org.letcode.test.TC001Login -->
+      <class name="org.letcode.test.TC002Login">
+        <test-method is-config="true" signature="startApp()[pri:0, instance:org.letcode.test.TC002Login@d6e7bab]" started-at="2021-04-24T08:09:00Z" name="startApp" finished-at="2021-04-24T08:09:12Z" duration-ms="12004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startApp -->
+        <test-method signature="loginTest2()[pri:0, instance:org.letcode.test.TC002Login@d6e7bab]" started-at="2021-04-24T08:09:12Z" name="loginTest2" finished-at="2021-04-24T08:09:14Z" duration-ms="2493" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest2 -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:org.letcode.test.TC002Login@d6e7bab]" started-at="2021-04-24T08:09:14Z" name="closeApp" finished-at="2021-04-24T08:09:15Z" duration-ms="708" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- org.letcode.test.TC002Login -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
