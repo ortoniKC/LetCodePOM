@@ -6,12 +6,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+
+import utils.ReadExcel;
 
 public class LetCodeBase {
 
-	String URL = "https://dev66365.service-now.com/navpage.do";
+	String URL = "https://dev62773.service-now.com/";
 
 	protected RemoteWebDriver driver = null;
+	public String fileName = "";
+	
+	@DataProvider(name="data")
+	public String[][] dataProvider() {
+		String[][] excelData = ReadExcel.getExcelData(fileName);
+		return excelData;
+	}
 
 	@BeforeMethod
 	public void startApp() {

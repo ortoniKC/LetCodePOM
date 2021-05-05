@@ -6,7 +6,7 @@
       <class name="org.letcode.test.TC001Login">
         <methods>
           <include name="closeApp"/>
-          <include name="loginTest"/>
+          <include name="loginTest" invocation-numbers="0 1"/>
           <include name="startApp"/>
         </methods>
       </class> <!-- org.letcode.test.TC001Login -->

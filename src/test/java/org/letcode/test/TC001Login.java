@@ -3,13 +3,19 @@ package org.letcode.test;
 import org.letcode.pages.LoginPage;
 import org.letcode.seleniumBase.LetCodeBase;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class TC001Login extends LetCodeBase{
 	
+	@BeforeTest
+	public void setData() {
+		fileName = "TC001";
+	}
 	
-	@Test
-	public void loginTest() {
+	@Test(dataProvider = "data")
+	// string un, string pass
+	public void loginTest(String[] data) {
 		/*
 		 * LoginPage lp = new LoginPage(); lp.enterUserName(null);
 		 * lp.enterUserPassword(null);
@@ -24,8 +30,8 @@ public class TC001Login extends LetCodeBase{
 		Assert.assertTrue(languageLabel);
 
 		new LoginPage(driver)
-		.enterUserName("admin")
-		.enterUserPassword("Pass123$")
+		.enterUserName(data[0])
+		.enterUserPassword(data[1])
 		.clickLogin();
 	}
 
