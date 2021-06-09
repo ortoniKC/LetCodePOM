@@ -12,7 +12,7 @@ import utils.ReadExcel;
 
 public class LetCodeBase {
 
-	String URL = "https://dev62773.service-now.com/";
+	String URL = "dev62773.service-now.com/";
 
 	protected RemoteWebDriver driver = null;
 	public String fileName = "";

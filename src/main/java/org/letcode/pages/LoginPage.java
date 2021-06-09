@@ -17,6 +17,7 @@ public class LoginPage extends LetCodeBase{
 	// locators
 	public boolean getUsernameLabel(){
 		driver.switchTo().frame(0);
+		// wait
 		return driver.findElementByXPath("//label[@for='user_name']").isDisplayed();
 	}
 	public boolean getPasswordLabel(){

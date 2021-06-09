@@ -20,6 +20,12 @@ Reference: An article from Browser Stack
 - Complete the pages from the [test page](https://www.letcode.com/test)
 - And the most important subscribe to LetCode 😉
 
+# Framework | Selenium | Java 🙅
+
+- 1. [What Is Framework? | Part - 1 | Selenium தமிழ்](https://youtu.be/VnP6OZphvIQ)
+- 2. [Selenium Framework - Part 2 | Selenium தமிழ்](https://youtu.be/fmRunzV0Tzs)
+
+
 ## Support [![Gitter](https://badges.gitter.im/letcode-selenium/community.svg)](https://gitter.im/letcode-selenium/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 While learning it is very common to have doubts, to enhnance your learning I am ready to support you as much as I can do.
