@@ -25,6 +25,10 @@ Reference: An article from Browser Stack
 - 1. [What Is Framework? | Part - 1 | Selenium தமிழ்](https://youtu.be/VnP6OZphvIQ)
 - 2. [Selenium Framework - Part 2 | Selenium தமிழ்](https://youtu.be/fmRunzV0Tzs)
 
+- 3. [Selenium Framework - Part 3 | Selenium தமிழ்](https://youtu.be/1fiwPiFmRkQ)
+
+- 4. [ENUM - Selenium Framework - Part 4 | Selenium தமிழ்](https://youtu.be/bU8pOmY_PeQ)
+
 
 ## Support [![Gitter](https://badges.gitter.im/letcode-selenium/community.svg)](https://gitter.im/letcode-selenium/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
