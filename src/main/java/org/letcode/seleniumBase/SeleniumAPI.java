@@ -99,7 +99,7 @@ public interface SeleniumAPI {
 	 * @param ele
 	 */
 	
-	void appendText(WebElement ele);
+	void appendText(WebElement ele, String testData);
 	
 	/**	
 	 * This function return the active page title
@@ -120,5 +120,5 @@ public interface SeleniumAPI {
 	 * @return boolean
 	 */
 
-	boolean isDisplayed();
+	boolean isDisplayed(WebElement ele);
 }

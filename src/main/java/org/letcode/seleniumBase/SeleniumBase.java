@@ -1,5 +1,8 @@
 package org.letcode.seleniumBase;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -10,6 +13,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumBase implements SeleniumAPI{
@@ -75,23 +79,26 @@ public class SeleniumBase implements SeleniumAPI{
 	}
 
 	public void switchToWindow(int i) {
-
-
+		Set<String> windowHandles = driver.getWindowHandles();
+		ArrayList<String> list = new ArrayList<String>(windowHandles);
+		driver.switchTo().window(list.get(i));
 	}
-
+	// TODO: function to check if the dropdown is selected ?
+	
 	public void selectValue(WebElement ele, String value) {
-
-
+		WebElement element = isElementVisible(ele);
+		new Select(element).selectByValue(value);
 	}
 
 	public void selectText(WebElement ele, String text) {
-
+		WebElement element = isElementVisible(ele);
+		new Select(element).selectByVisibleText(text);
 
 	}
 
 	public void selectIndex(WebElement ele, int position) {
-
-
+		WebElement element = isElementVisible(ele);
+		new Select(element).selectByIndex(position);
 	}
 
 	public void click(WebElement ele) {
@@ -103,34 +110,41 @@ public class SeleniumBase implements SeleniumAPI{
 	}
 
 	public void type(WebElement ele, String testData) {
-		WebElement element = wait.until(ExpectedConditions.visibilityOf(ele));
+		WebElement element = isElementVisible(ele);
 		element.clear();
 		element.sendKeys(testData);
 	}
+
+	private WebElement isElementVisible(WebElement ele) {
+		WebElement element = wait.
+				withMessage("Element is not visible")
+				.until(
+				ExpectedConditions
+				.visibilityOf(ele));
+		return element;
+	}
 	public void type(WebElement ele, String testData, Keys keys) {
-		WebElement element = wait.until(ExpectedConditions.visibilityOf(ele));
+		WebElement element = isElementVisible(ele);
 		element.clear();
 		element.sendKeys(testData, keys);
 	}
 
-	public void appendText(WebElement ele) {
-
+	public void appendText(WebElement ele, String testData) {
+		WebElement element = isElementVisible(ele);
+		element.sendKeys(testData);
 
 	}
 
 	public String getTitle() {
-
-		return null;
+		return driver.getTitle();
 	}
 
 	public String getURL() {
-
-		return null;
+		return driver.getCurrentUrl();
 	}
 
-	public boolean isDisplayed() {
-
-		return false;
+	public boolean isDisplayed(WebElement ele) {
+		return ele.isDisplayed();
 	}
 
 	
