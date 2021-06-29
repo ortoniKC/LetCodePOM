@@ -32,6 +32,8 @@ Reference: An article from Browser Stack
 
 - 5. [Selenium Framework - Part 5 | Selenium தமிழ்](https://youtu.be/Cv73aEd6sAI)
 
+- 6. [Properties File and It's usage](https://youtu.be/bfPG5kTMyL8)
+
 
 ## Support [![Gitter](https://badges.gitter.im/letcode-selenium/community.svg)](https://gitter.im/letcode-selenium/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
