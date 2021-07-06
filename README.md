@@ -34,6 +34,10 @@ Reference: An article from Browser Stack
 
 - 6. [Properties File and It's usage](https://youtu.be/bfPG5kTMyL8)
 
+- 7. [Selenium Framework - Part 6](https://youtu.be/BjFfeWklyBo)
+
+- 8. [Extent Report | Selenium Tamil Tutorial](https://youtu.be/qPYjjInfaGc)
+
 
 ## Support [![Gitter](https://badges.gitter.im/letcode-selenium/community.svg)](https://gitter.im/letcode-selenium/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 

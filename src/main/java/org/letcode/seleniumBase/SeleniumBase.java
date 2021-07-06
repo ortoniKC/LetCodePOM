@@ -1,12 +1,13 @@
 package org.letcode.seleniumBase;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -17,7 +18,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SeleniumBase implements SeleniumAPI{
-	long timeOuts = 30;
+	long timeOuts = 10; //30
 	long maxWaitTime =10;
 
 	RemoteWebDriver driver = null;
@@ -63,17 +64,31 @@ public class SeleniumBase implements SeleniumAPI{
 	}
 
 	public WebElement element(Locators type, String value) {
-		switch (type) {
-		case id:
-			return driver.findElement(By.id(value));
-		case name:
-			return driver.findElement(By.name(value));
-		case xpath:
-			return driver.findElement(By.xpath(value));
-		case link:
-			return driver.findElement(By.linkText(value));
-		default:
-			break;
+		try {
+			switch (type) {
+			case id:
+				return driver.findElement(By.id(value));
+			case name:
+				return driver.findElement(By.name(value));
+			case xpath:
+				return driver.findElement(By.xpath(value));
+			case link:
+				return driver.findElement(By.linkText(value));
+			case className:
+				return driver.findElement(By.className(value));
+			case css:
+				return driver.findElement(By.cssSelector(value));
+			default:
+				break;
+			}
+		}catch (NoSuchElementException e) {
+			System.err.println("Element not found => "+e.getMessage());
+			throw new NoSuchElementException("Element not found");
+		}catch(WebDriverException e) {
+			System.err.println(e.getMessage());
+			throw new WebDriverException("Some unknown webdriver error");
+		}catch(Exception e) {
+			System.err.println(e.getMessage());
 		}
 		return null;
 	}
@@ -84,7 +99,7 @@ public class SeleniumBase implements SeleniumAPI{
 		driver.switchTo().window(list.get(i));
 	}
 	// TODO: function to check if the dropdown is selected ?
-	
+
 	public void selectValue(WebElement ele, String value) {
 		WebElement element = isElementVisible(ele);
 		new Select(element).selectByValue(value);
@@ -93,7 +108,6 @@ public class SeleniumBase implements SeleniumAPI{
 	public void selectText(WebElement ele, String text) {
 		WebElement element = isElementVisible(ele);
 		new Select(element).selectByVisibleText(text);
-
 	}
 
 	public void selectIndex(WebElement ele, int position) {
@@ -110,17 +124,23 @@ public class SeleniumBase implements SeleniumAPI{
 	}
 
 	public void type(WebElement ele, String testData) {
-		WebElement element = isElementVisible(ele);
-		element.clear();
-		element.sendKeys(testData);
+		try {
+			WebElement element = isElementVisible(ele);
+			element.clear();
+			element.sendKeys(testData);
+		} catch (NullPointerException e) {
+			System.out.println("Element might be null => " +e.getMessage());
+		}catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
 	}
 
 	private WebElement isElementVisible(WebElement ele) {
 		WebElement element = wait.
 				withMessage("Element is not visible")
 				.until(
-				ExpectedConditions
-				.visibilityOf(ele));
+						ExpectedConditions
+						.visibilityOf(ele));
 		return element;
 	}
 	public void type(WebElement ele, String testData, Keys keys) {
@@ -147,6 +167,6 @@ public class SeleniumBase implements SeleniumAPI{
 		return ele.isDisplayed();
 	}
 
-	
+
 
 }
