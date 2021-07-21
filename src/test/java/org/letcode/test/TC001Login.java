@@ -14,8 +14,8 @@ public class TC001Login extends LetCodeBase{
 	}
 	
 	@Test(dataProvider = "data")
-	// string un, string pass
-	public void loginTest(String[] data) {
+	
+	public void loginTest(String[] data) {// string un, string pass
 		/*
 		 * LoginPage lp = new LoginPage(); lp.enterUserName(null);
 		 * lp.enterUserPassword(null);

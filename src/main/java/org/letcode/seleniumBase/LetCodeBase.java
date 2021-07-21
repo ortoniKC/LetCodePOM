@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
 
 import utils.ReadExcel;
 
-public class LetCodeBase {
+public class LetCodeBase{
 
 	String URL = "dev62773.service-now.com/";
 

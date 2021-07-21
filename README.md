@@ -38,6 +38,8 @@ Reference: An article from Browser Stack
 
 - 8. [Extent Report | Selenium Tamil Tutorial](https://youtu.be/qPYjjInfaGc)
 
+- 9. [Extent Report #2 | Selenium Tamil Tutorial](https://youtu.be/DKV5qPUjnE0)
+
 
 ## Support [![Gitter](https://badges.gitter.im/letcode-selenium/community.svg)](https://gitter.im/letcode-selenium/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
